@@ -1,0 +1,196 @@
+h5 {
+    text-align: center;
+}
+
+#calendarMonth {
+    margin: 0;
+}
+
+.container {
+    width:80%;
+    margin:auto;
+    /* border: rgb(77, 72, 72) 2px solid; */
+    border-radius: 3px;
+}
+
+#month-wrapper {
+    padding: 0em 0em 0.5em 0em;
+    display:flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height:3%;
+    margin-top:2%;    
+}
+
+#month-year {
+    grid-column: 4/6;
+    justify-self: center;
+}
+
+.arrow {
+    width:auto;
+    height:100%;
+}
+
+#rightArrow {
+    transform: scaleX(-1);
+}
+
+#day-wrapper {
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    border-radius: 3px;
+    margin-bottom: 0.2em;
+    background-color: rgba(49, 49, 48, 0.76);
+    /* border-bottom:  rgb(77, 72, 72) 1px solid; */
+}
+
+.price-wrapper {
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    border-radius: 3px;
+    grid-gap:0.5em;
+}
+
+.price-wrapper p {
+    margin:0;
+    margin-bottom:4%;
+    width:100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+#price-wrapper-container {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 0.5em;
+    margin-top: 2%;
+}
+
+#booked-wrapper-container {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top:2%;
+}
+
+.grid-two-col {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin:0;
+    border-bottom: rgba(77, 72, 72, 0.548) 1px solid;
+}
+
+#day-wrapper > div {
+    /* text-align: right; */
+    padding: 0.4em 0.3em;
+    color: white;
+}
+
+#calendarWrapper {
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-auto-rows: 150px;
+    grid-gap:0.2em;
+    /* Stop page from resetting after loading new calendar page */
+    min-height: 700px;
+}
+
+#calendarWrapper > div {
+    background-color: rgba(211, 211, 211, 0.596);
+    border: rgba(77, 72, 72, 0.548) 1px solid;
+    border-radius: 3px;
+}
+
+.calendar-number {
+    text-align: right;
+    margin:0;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+}
+
+.red {
+    background-color: 	#B22222;
+    color: #fff;
+}
+
+.blue {
+    /* background-color: #0b47cacc */
+    background-color: 	#3b5998;
+    color: #fff;
+}
+
+.light-grey {
+    background-color: rgba(211, 211, 211, 0.596);
+}
+
+.green {
+    background-color: #50C878;
+    color: #fff;
+}
+
+.purple {
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.orange {
+    background-color:#FFA500;
+    color: #fff;
+}
+
+.yellow {
+    background-color:#EEE8AA;
+}
+
+.calendar-text {
+    font-size: 13px;
+    margin-top: 5px;
+    text-align: left;
+    padding: 0.3em 0.5em;
+}
+
+.first-price {
+    background-color: #50C878;
+    border-radius: 3px;
+    color:white;
+}
+
+.second-price {
+    background-color: #EEE8AA;
+    border-radius: 3px;
+}
+
+.third-price {
+    background-color: #FFA500;
+    border-radius: 3px;
+    color:white;
+}
+
+.fourth-price {
+    background-color: blueviolet;
+    border-radius: 3px;
+    color:white;
+}
+
+.booked {
+    background-color:#B22222;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.card-header p {
+    text-align: center;
+    margin: 0;
+}
+
+@media (max-width:1100px) {
+    #calendarWrapper {
+        grid-auto-rows: 100px;
+        grid-gap:0.1em;
+    }
+}
+
+@media (max-width:1000px) {
+    #price-wrapper-container {
+        grid-template-columns: 1fr;
+    }
+}
