@@ -1,0 +1,106 @@
+{"2018": [
+    {
+        "month":"january"
+    },
+    {
+        "month":"february"
+    },
+    {
+        "month":"march"
+    },
+    {
+        "month":"april",
+        "2": {
+            "colour" : "green"
+        }
+    },
+    {
+        "month":"may",
+        "1": {
+            "colour":"green"
+        },
+        "14": {
+            "colour": "green",
+            "colourTwo" : "yellow"
+        },
+        "15" : {
+            "colour":"yellow"
+        }
+
+    },
+    {
+        "month":"june",
+        "1": {
+            "colour":"yellow"
+        },
+        "18" :{
+            "colour":"yellow",
+            "colourTwo":"orange"
+        },
+        "19" :{
+            "colour":"orange"
+        }
+    },
+    {
+        "month":"july",
+        "1": {
+            "colour":"orange"
+        },
+        "9": {
+            "colour":"orange",
+            "colourTwo":"purple"
+        },
+        "10": {
+            "colour":"purple"
+        }
+    },
+    {
+        "month":"august",
+        "1" : {
+            "colour":"purple"
+        },
+        "27": {
+            "colour":"purple",
+            "colourTwo":"orange"
+        },
+        "28":{
+            "colour":"orange"
+        }
+    },
+    {   
+        "month":"september",
+        "1": {
+            "colour":"orange"
+        },
+        "3" : {
+            "colour":"orange",
+            "colourTwo":"yellow"
+        },
+        "4": {
+            "colour":"yellow"
+        },
+        "24": {
+            "colour":"yellow",
+            "colourTwo":"green"
+        },
+        "25" : {
+            "colour":"green"
+        }
+    },
+    {
+        "month":"october",
+        "1" : {
+            "colour":"green"
+        },
+        "30":{
+            "colour":"light-grey"
+        }
+    },
+    {
+        "month":"november"
+    },
+    {
+        "month":"december"
+    }
+]
+}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chagnolet | Home{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="card mx-auto">
+        <h2 class="card-header">Contact Details</h2>
+        <div class="card-body">
+            <p class="first-line">We live on-site in a separate part of the main house (with our own gardens). We always make sure we are available to help you find your feet and to answer any questions although you needn't see us unless you want to!</p>
+            <p>If you would like us to send you an order form or if you have any questions then please contact us by filling in the form or calling the number provided below.</p>
+            <p>Andrew and Wendy Gill: </p>
+            <p>Tel: +33-5-46-59-28-10 (if you hear a French lady speak, just wait for the beep and leave a message)</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-container">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}
