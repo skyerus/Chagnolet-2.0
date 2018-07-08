@@ -15,8 +15,6 @@ class Calendar {
         // Day of the week (0 means Sunday, 1 Monday etc.)
         this.dayAtStartOfMonth = this.startOfMonthDate.getDay();
         this.text='';
-        // Colour of the top of each day
-        this.color = 'red';
         this.numberOfDaysInMonth = this.daysInMonth(this.monthIndex,this.year);
         this._renderCalendarMonth();
     }
@@ -40,7 +38,7 @@ class Calendar {
         // Changes month and year displayed
         calendarMonth.innerHTML = '';
         calendarMonth.innerHTML += `${this.month} ${this.year}`;      
-        var myRequest = new Request('months.json');
+        var myRequest = new Request('../months.json');
         fetch(myRequest)
         .then(function(response) {return response.json();})
         .then(function(months) {
@@ -99,6 +97,19 @@ class Calendar {
         this._renderCalendarMonth();
     }
 
+    daysToMobile() {
+        let dayWrapper = document.getElementById('day-wrapper');
+        dayWrapper.innerHTML = 
+        `<div>M</div>
+        <div>T</div>
+        <div>W</div>
+        <div>T</div>
+        <div>F</div>
+        <div>S</div>
+        <div>S</div>`;
+
+    }
+
     // AJAX handling
     // loadMonth(){
     // let xml = new XMLHttpRequest();
@@ -120,10 +131,15 @@ class Calendar {
     
 }
 
-// Creates the calendar
-calendar = new Calendar();
+
+calendar= new Calendar;
 leftArrow = document.getElementById('leftArrow');
 rightArrow = document.getElementById('rightArrow');
+
+// Changes days to mobile format
+if (window.matchMedia("(max-width: 1000px)").matches) {
+    calendar.daysToMobile();
+} 
 
 // Clicking the arrows change the month
 leftArrow.addEventListener("click", function(){
