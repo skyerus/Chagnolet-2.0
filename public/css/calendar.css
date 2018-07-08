@@ -92,8 +92,9 @@ h5 {
     grid-auto-rows: 150px;
     grid-gap:0.2em;
     /* Stop page from resetting after loading new calendar page */
-    min-height: 700px;
+    min-height: 950px;
 }
+
 
 #calendarWrapper > div {
     background-color: rgba(211, 211, 211, 0.596);
@@ -189,8 +190,29 @@ h5 {
     }
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
+    #calendarWrapper {
+        grid-auto-rows: 35px;
+        grid-gap:0.1em;
+    }
+
     #price-wrapper-container {
         grid-template-columns: 1fr;
+    }
+
+    #day-wrapper > div {
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .calendar-number {
+        margin-right:3px;
+        margin-top:5px;
+        padding: 0;
+        padding-bottom: 3.5px;
+        border-radius:3px;
     }
 }
