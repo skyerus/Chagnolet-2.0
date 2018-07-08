@@ -1,0 +1,48 @@
+<nav class="my-navbar" style= "margin-bottom:1%;">
+        <div class="container">
+            
+            <div class="">
+                <img src="/img/menu.svg" id="menu-btn">
+                <img src="/img/logo.png" id = "logo">
+                <ul class="row-nav">
+                    <li class="row-nav-item">
+                        <a href="/fr/"><p {% if app.request.attributes.get('_route') in ['homefr'] %} class="active"{% endif %}>Home</p></a>
+                    </li>
+                    <li class="row-nav-item">
+                        <a href="/fr/renseignements"><p {% if app.request.attributes.get('_route') in ['aboutfr'] %} class="active"{% endif %}>Renseignements sur le Moulin</p></a>
+                    </li>
+                    <li class="row-nav-item">
+                        <a href="/fr/environs"><p {% if app.request.attributes.get('_route') in ['areafr'] %} class="active"{% endif %}>Cressé et ses environs</p></a>
+                    </li>
+                    <li class="push-right row-nav-item">
+                        <a href="/fr/prix"><p {% if app.request.attributes.get('_route') in ['pricesfr'] %} class="active"{% endif %}>Prix et disponibilité</p></a>
+                    </li>
+                    <li class="row-nav-item">
+                        <a href="/fr/contact"><p {% if app.request.attributes.get('_route') in ['contactfr'] %} class="active"{% endif %}>Contact</p></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="mx-auto order-0">
+                <img src="/img/logo.png" style="width:100%;">            
+            </div> -->
+            <div id="col-nav-container">
+                <ul class="col-nav">
+                    <li class="col-nav-item">
+                        <a href="/fr/"><p {% if app.request.attributes.get('_route') in ['homefr'] %} class="active"{% endif %}>Home</p></a>
+                    </li>
+                    <li class="col-nav-item">
+                        <a href="/fr/renseignements"><p {% if app.request.attributes.get('_route') in ['aboutfr'] %} class="active"{% endif %}>Renseignements sur le Moulin</p></a>
+                    </li>
+                    <li class="col-nav-item">
+                        <a href="/fr/environs"><p {% if app.request.attributes.get('_route') in ['areafr'] %} class="active"{% endif %}>Cressé et ses environs</p></a>
+                    </li>
+                    <li class="col-nav-item">
+                        <a href="/fr/prix"><p {% if app.request.attributes.get('_route') in ['pricesfr'] %} class="active"{% endif %}>Prix et disponibilité</p></a>
+                    </li>
+                    <li class="col-nav-item">
+                        <a href="/fr/contact"><p {% if app.request.attributes.get('_route') in ['contactfr'] %} class="active"{% endif %}>Contact</p></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
