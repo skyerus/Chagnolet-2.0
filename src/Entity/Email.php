@@ -22,6 +22,11 @@ class Email
     private $name;
 
     /**
+     * @ORM\Column(type="string",length = 100)
+     */
+    private $nom;
+
+    /**
      * @ORM\Column(type="string", length=100)
      */
     private $email;
@@ -55,6 +60,10 @@ class Email
         return $this->message;
     }
 
+    public function getNom() {
+        return $this->nom;
+    }
+
     // SETTER methods
 
     public function setName($name){
@@ -67,5 +76,9 @@ class Email
 
     public function setMessage($message){
         $this->message = $message;
+    }
+
+    public function setNom($nom){
+        $this->nom = $nom;
     }
 }
