@@ -1,6 +1,6 @@
-if (window.matchMedia("(max-width: 775px)").matches) {
+// if (window.matchMedia("(max-width: 775px)").matches) {
 
-}
+// }
 
 let menuBtn = document.getElementById('menu-btn');
 // function openMenu(){
