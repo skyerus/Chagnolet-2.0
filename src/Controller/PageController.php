@@ -83,14 +83,10 @@
             if($form->isSubmitted() && $form->isValid()){
                 $email = $form->getData();
 
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($email);
-                $entityManager->flush();
-
-                // $transport = (new \Swift_SmtpTransport('auth.smtp.1and1.co.uk', 587))
-                // ->setUsername('skye.gill@chagnolet.com')
-                // ->setPassword('Maubuisson!09')
-                // ;
+                // Store to DB:
+                // $entityManager = $this->getDoctrine()->getManager();
+                // $entityManager->persist($email);
+                // $entityManager->flush();
 
                 $transport = (new \Swift_SmtpTransport($_ENV["MAILER_HOST"], $_ENV["MAILER_PORT"]))
                 ->setUsername($_ENV["MAILER_USERNAME"])
