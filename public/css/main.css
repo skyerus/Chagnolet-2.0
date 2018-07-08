@@ -26,11 +26,10 @@ footer {
 }
 
 #logo {
-  width:43%;
-}
+  width: 250px;
+  float: left;
+  margin-top:1%;
 
-.navbar {
-  border-bottom: rgb(146, 139, 139) 4px solid;
 }
 
 h2 {
@@ -68,4 +67,70 @@ h2 {
   width: 70%;
   margin:auto;
   margin-top:3%;
+}
+
+.my-navbar {
+  height:auto;
+  width:100%;
+  overflow: hidden;
+  background-color:#343a40;
+  padding-bottom: 10px;
+  border-bottom: rgb(146, 139, 139) 4px solid;
+}
+
+.row-nav-item a {
+  display:block;
+  float:left;
+  color:#fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  padding:0;
+  margin-left: 2%;
+  color: rgb(189, 185, 185);
+}
+
+.row-nav {
+  padding:0;
+  list-style: none;
+  padding-top: 73px;
+}
+
+.push-right {
+  margin-left:79%;
+}
+
+#menu-btn {
+  width:20px;
+  float:left;
+  margin-top:10px;
+}
+
+@media (max-width:1200px) {
+  .push-right{
+    margin-left: 65%;
+  }
+}
+
+.col-nav {
+  padding:0;
+  list-style: none;
+  margin:0;
+}
+
+#col-nav-container {
+  margin-top: 25px;
+  height:0;
+  /* transition:height 200ms ease-in; */
+  transition:height 0.5s;
+}
+
+.col-nav-item {
+  padding-top: 5px;
+}
+
+.col-nav-item a {
+  color: rgb(189, 185, 185);
+  padding: 0;
+  display:block;
 }
