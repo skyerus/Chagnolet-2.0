@@ -1,8 +1,19 @@
 <footer class="footer navbar-dark bg-dark">
     <div class="wrapper">
         <div class="container">
-            <img src="/img/frenchflag.png" class = "flags">
-            <img src="/img/ukflag.png" class = "flags">
+            <a {% if app.request.attributes.get('_route') in ['home'] %} href="/fr"
+            {% elseif app.request.attributes.get('_route') in ['about'] %} href="/fr/renseignements"
+            {% elseif app.request.attributes.get('_route') in ['area'] %} href="/fr/environs"
+            {% elseif app.request.attributes.get('_route') in ['prices'] %} href="/fr/prix"
+            {% elseif app.request.attributes.get('_route') in ['contact'] %} href="/fr/contact"
+            {% endif %}>
+            <img src="/img/frenchflag.png" class = "flags"></a>
+            <a {% if app.request.attributes.get('_route') in ['homefr'] %} href="/"
+            {% elseif app.request.attributes.get('_route') in ['aboutfr'] %} href="/en/about"
+            {% elseif app.request.attributes.get('_route') in ['areafr'] %} href="/en/area"
+            {% elseif app.request.attributes.get('_route') in ['pricesfr'] %} href="/en/prices"
+            {% elseif app.request.attributes.get('_route') in ['contactfr'] %} href="/en/contact"
+            {% endif %}><img src="/img/ukflag.png" class = "flags"></a>
         </div>
     </div>
 </footer>
