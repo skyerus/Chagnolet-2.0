@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link href="/bootstrapcss/bootstrap.min.css" rel="stylesheet">
         <link href="/css/main.css" rel="stylesheet">
@@ -13,8 +14,8 @@
         {% block body %}{% endblock %}
         </div>
         {{ include ('/inc/footer.html.twig') }}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="/bootstrapjs/bootstrap.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <!-- <script src="/bootstrapjs/bootstrap.min.js"></script> -->
         <script src="/js/main.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
