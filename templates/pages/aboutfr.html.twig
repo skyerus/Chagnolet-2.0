@@ -1,0 +1,54 @@
+{% extends 'basefr.html.twig' %}
+
+{% block title %}Chagnolet | Renseignements{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="card mx-auto">
+        <h2 class="card-header">Le bâtiment principal et la maisonnette</h2>
+        <div class="card-body">
+            <p class="first-line">Nous avons restauré cet ensemble de bâtiments. Il se compose du bâtiment principal dans lequel est situé le vieux moulin et d'une maisonnette. Ils sont séparés par une cour (parfaite pour la pétanque) et le barbecue. La grande piscine (11m x 6m) avec marches romaines et une douche solaire, est entourée d'une terrasse, de jardins avec pelouse et d'un bouquet de hauts platanes dont on apprécie l'ombrage frais.</p>
+            <p>La maison principale peut accueillir 11 personnes avec confort. La cuisine/salle à manger est complètement pourvue et aménagée (machine à laver et lave-vaisselle) et 16 couverts peuvent être dressés sur la table en chêne faite à la main.</p>
+            <div>
+                <div>
+                    <p>Au rez-de-chaussée avec vue sur la rivière :</p>
+                    <ul>
+                        <li>Chambre grand-lit avec douche/WC</li>
+                        <li>Chambre à deux lits</li>
+                        <li>Une salle de bains/douche/WC</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>En haut dans les combles restaurés aux poutres apparentes et murs de pierre :</p>
+                    <ul>
+                        <li>Chambre double</li>
+                        <li>Chambre à deux lits</li>
+                        <li>Chambre à trois lits</li>
+                        <li>2 Salle de douche/WC</li>
+                    </ul>
+                </div>
+            </div>
+            <p>La maisonnette a une chambre à deux lits avec salle de douche/WC, une chambre double avec salle bain/douche/WC et une cuisine/salle à manger avec un poêle à bois.</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="main-img">
+            <img src="/img/1.jpg" id="current">
+        </div>
+
+        <div class="imgs">
+            <img src="/img/1.jpg">
+            <img src="/img/2.jpg">
+            <img src="/img/3.jpg">
+            <img src="/img/4.jpg">
+            <img src="/img/5.jpg">
+            <img src="/img/6.jpg">
+        </div>
+    </div>
+</div>
+
+{% block javascripts %}
+<script src="/js/about.js"></script>
+{% endblock %}
+{% endblock %}
