@@ -27,7 +27,7 @@
         }
 
         /**
-         * @Route("/about")
+         * @Route("/en/about", name="about")
          * @Method({"GET"})
          */
         public function about() {
@@ -35,7 +35,7 @@
         }
 
         /**
-         * @Route("/area")
+         * @Route("/en/area", name="area")
          * @Method({"GET"})
          */
         public function area(){
@@ -43,23 +43,15 @@
         }
 
         /**
-         * @Route("/prices")
+         * @Route("/en/prices", name="prices")
          * @Method({"GET"})
          */
         public function prices(){
             return $this->render('pages/prices.html.twig');
         }
 
-        // /**
-        //  * @Route("/contact")
-        //  * @Method({"GET"})
-        //  */
-        // public function contact(){
-        //     return $this->render('pages/contact.html.twig');
-        // }
-
         /**
-         * @Route("/contact",name="send_email")
+         * @Route("/en/contact",name="contact")
          * Method({"GET","POST"})
          */
         public function new(Request $request){
@@ -88,14 +80,14 @@
                 // $entityManager->persist($email);
                 // $entityManager->flush();
 
-                $transport = (new \Swift_SmtpTransport($_ENV["MAILER_HOST"], $_ENV["MAILER_PORT"]))
+                $transport = (new \Swift_SmtpTransport($_ENV["MAILER_HOST"], $_ENV["MAILER_PORT"],'tls'))
                 ->setUsername($_ENV["MAILER_USERNAME"])
                 ->setPassword($_ENV["MAILER_PASSWORD"])
                 ;
                 $mailer = new \Swift_Mailer($transport);
                 $sendEmail = $this->sendEmail($email->getName(),$email->getEmail(),$email->getMessage(), $mailer);
 
-                return $this->redirectToRoute('home');
+                return $this->redirectToRoute('thankyou');
             }
 
             return $this->render('pages/contact.html.twig', array(
@@ -134,6 +126,101 @@
             $mailer->send($message);
         
             // return $this->render(...);
+        }
+
+        /**
+         * @Route("/en/thankyou", name="thankyou")
+         * @Method({"GET"})
+         */
+        public function thankyou(){
+            return $this->render('pages/thankyou.html.twig');
+        }
+
+        /**
+         * @Route("/fr/", name="homefr")
+         * @Method({"GET"})
+         */
+        public function indexfr() {
+            // return new Response("<html><body>Hello World</body></html>");
+
+            return $this->render('pages/indexfr.html.twig');
+        }
+
+        /**
+         * @Route("/fr/renseignements", name="aboutfr")
+         * @Method({"GET"})
+         */
+        public function aboutfr() {
+            return $this->render('pages/aboutfr.html.twig');
+        }
+
+        /**
+         * @Route("/fr/environs", name="areafr")
+         * @Method({"GET"})
+         */
+        public function areafr(){
+            return $this->render('pages/areafr.html.twig');
+        }
+
+        /**
+         * @Route("/fr/prix", name="pricesfr")
+         * @Method({"GET"})
+         */
+        public function pricesfr(){
+            return $this->render('pages/pricesfr.html.twig');
+        }
+
+        /**
+         * @Route("/fr/contact",name="contactfr")
+         * Method({"GET","POST"})
+         */
+        public function newfr(Request $request){
+            $email = new Email();
+
+            $form = $this->createFormBuilder($email)
+            ->add('nom',TextType::class, array(
+                'attr'=> array('class'=>'form-control')))
+            ->add('email',EmailType::class,array(
+                'attr'=> array('class'=>'form-control')))
+            ->add('message',TextareaType::class,array(
+                'attr'=> array('class'=>'form-control')))
+            ->add('send',SubmitType::class,array(
+                'label'=>'Envoyer',
+                'attr' => array('class' => 'btn btn-primary mt-3')
+            ))
+            ->getForm();
+
+            $form->handleRequest($request);
+
+            if($form->isSubmitted() && $form->isValid()){
+                $email = $form->getData();
+
+                // Store to DB:
+                // $entityManager = $this->getDoctrine()->getManager();
+                // $entityManager->persist($email);
+                // $entityManager->flush();
+
+                $transport = (new \Swift_SmtpTransport($_ENV["MAILER_HOST"], $_ENV["MAILER_PORT"],'tls'))
+                ->setUsername($_ENV["MAILER_USERNAME"])
+                ->setPassword($_ENV["MAILER_PASSWORD"])
+                ;
+                $mailer = new \Swift_Mailer($transport);
+                $sendEmail = $this->sendEmail($email->getName(),$email->getEmail(),$email->getMessage(), $mailer);
+
+                return $this->redirectToRoute('thankyoufr');
+            }
+
+            return $this->render('pages/contactfr.html.twig', array(
+                'form' => $form->createView()
+            ));
+        }
+
+        /**
+         * @Route("/fr/thankyou", name="thankyoufr")
+         * @Method({"GET"})
+         */
+        public function thankyoufr(){
+            return $this->render('pages/thankyoufr.html.twig');
         }
     }
 ?>
