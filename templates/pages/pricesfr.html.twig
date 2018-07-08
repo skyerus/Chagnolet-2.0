@@ -1,0 +1,83 @@
+{% extends 'basefr.html.twig' %}
+
+{% block title %}Chagnolet | Prix{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="/css/calendar.css">{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="card mx-auto">
+        <h2 class="card-header">Prix et disponibilités</h2>
+        <div class="card-body">
+            <p class="first-line">Nous prenons les réservations toute l'année. Si les dates mentionnées ne vous conviennent pas, contactez-nous.</p>
+        </div>
+    </div>
+
+    <div id="price-wrapper-container">
+        <div class="card">
+            <div class="card-header"><h5>Maison & Maisonette (15+bébé)</h5><p>(par semaine)</p></div>
+            <div class="card-body">
+                <div class="price-wrapper">
+                    <div class="first-price"><p>£935</p></div>
+                    <div class="second-price"><p>£1,290</p></div>
+                    <div class="third-price"><p>£1,725</p></div>
+                    <div class="fourth-price"><p>£2,145</p></div>
+                    <div class="booked"><p>Réservé</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h5>Maison (11+bébé)</h5><p>(par semaine)</p></div>
+            <div class="card-body">
+                <div class="price-wrapper">
+                        <div class="first-price"><p>£690</p></div>
+                        <div class="second-price"><p>£945</p></div>
+                        <div class="third-price"><p>£1,325</p></o></div>
+                        <div class="fourth-price"><p>-</p></div>
+                        <div class="booked"><p>Réservé</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h5>Maisonette (4+bébé)</h5><p>(par semaine)</p></div>
+            <div class="card-body">
+                <div class="price-wrapper">
+                        <div class="first-price"><p>£250</p></div>
+                        <div class="second-price"><p>£350</p></div>
+                        <div class="third-price"><p>£450</p></div>
+                        <div class="fourth-price"><p>-</p></div>
+                        <div class="booked"><p>Réservé</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="month-wrapper">
+        <div id="left-arrow-container">
+            <img id = "leftArrow" class= "arrow" src="/img/left-arrow.svg">
+        </div>
+        <div id="month-year">
+            <h3 id = "calendarMonth"></h3>
+        </div>
+        <div id="right-arrow-container">
+            <img id = "rightArrow" class="arrow" src="/img/left-arrow.svg">
+        </div>
+    </div>
+    <div id="day-wrapper">
+        <div>Lundi</div>
+        <div>Mardi</div>
+        <div>Mercredi</div>
+        <div>Jeudi</div>
+        <div>Vendredi</div>
+        <div>Samedi</div>
+        <div>Dimanche</div>
+    </div>
+    <div id="calendarWrapper">
+        <!-- insert days using JS -->
+    </div>
+</div>
+
+</div>
+
+{% block javascripts %}
+<script src="/js/calendarfr.js"></script>
+{% endblock %}
+{% endblock %}
