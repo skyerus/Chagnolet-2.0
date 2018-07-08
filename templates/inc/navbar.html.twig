@@ -1,24 +1,24 @@
 <nav class="my-navbar" style= "margin-bottom:1%;">
     <div class="container">
-
+        
         <div class="">
             <img src="/img/menu.svg" id="menu-btn">
             <img src="/img/logo.png" id = "logo">
             <ul class="row-nav">
                 <li class="row-nav-item">
-                    <a href="/" class="">Home</a>
+                    <a href="/"><p {% if app.request.attributes.get('_route') in ['home'] %} class="active"{% endif %}>Home</p></a>
                 </li>
                 <li class="row-nav-item">
-                    <a href="/about" class="">About</a>
+                    <a href="/en/about"><p {% if app.request.attributes.get('_route') in ['about'] %} class="active"{% endif %}>About</p></a>
                 </li>
                 <li class="row-nav-item">
-                    <a href="/area" class="">Area</a>
+                    <a href="/en/area"><p {% if app.request.attributes.get('_route') in ['area'] %} class="active"{% endif %}>Area</p></a>
                 </li>
                 <li class="push-right row-nav-item">
-                        <a class="" href="/prices">Prices & Availability</a>
+                    <a href="/en/prices"><p {% if app.request.attributes.get('_route') in ['prices'] %} class="active"{% endif %}>Prices & Availability</p></a>
                 </li>
                 <li class="row-nav-item">
-                    <a class="" href="/contact">Contact Us</a>
+                    <a href="/en/contact"><p {% if app.request.attributes.get('_route') in ['contact'] %} class="active"{% endif %}>Contact Us</p></a>
                 </li>
             </ul>
         </div>
@@ -28,19 +28,19 @@
         <div id="col-nav-container">
             <ul class="col-nav">
                 <li class="col-nav-item">
-                    <a href="/" class="">Home</a>
+                    <a href="/"><p {% if app.request.attributes.get('_route') in ['home'] %} class="active"{% endif %}>Home</p></a>
                 </li>
                 <li class="col-nav-item">
-                    <a href="/about" class="">About</a>
+                    <a href="/en/about"><p {% if app.request.attributes.get('_route') in ['about'] %} class="active"{% endif %}>About</p></a>
                 </li>
                 <li class="col-nav-item">
-                    <a href="/area" class="">Area</a>
+                    <a href="/en/area"><p {% if app.request.attributes.get('_route') in ['area'] %} class="active"{% endif %}>Area</p></a>
                 </li>
                 <li class="col-nav-item">
-                        <a class="" href="/prices">Prices & Availability</a>
+                    <a href="/en/prices"><p {% if app.request.attributes.get('_route') in ['prices'] %} class="active"{% endif %}>Prices & Availability</p></a>
                 </li>
                 <li class="col-nav-item">
-                    <a class="" href="/contact">Contact Us</a>
+                    <a href="/en/contact"><p {% if app.request.attributes.get('_route') in ['contact'] %} class="active"{% endif %}>Contact Us</p></a>
                 </li>
             </ul>
         </div>
