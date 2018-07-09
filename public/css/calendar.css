@@ -41,7 +41,7 @@ h5 {
     grid-template-columns: repeat(7,1fr);
     border-radius: 3px;
     margin-bottom: 0.2em;
-    background-color: rgba(49, 49, 48, 0.76);
+    background-color: #343a40;
     /* border-bottom:  rgb(77, 72, 72) 1px solid; */
 }
 
@@ -83,7 +83,7 @@ h5 {
 #day-wrapper > div {
     /* text-align: right; */
     padding: 0.4em 0.3em;
-    color: white;
+    color: rgb(189, 185, 185);
 }
 
 #calendarWrapper {
