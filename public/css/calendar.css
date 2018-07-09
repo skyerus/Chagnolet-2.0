@@ -187,13 +187,21 @@ h5 {
     #calendarWrapper {
         grid-auto-rows: 100px;
         grid-gap:0.1em;
+        min-height: 620px;
     }
+
 }
 
 @media (max-width: 1000px) {
     #calendarWrapper {
         grid-auto-rows: 35px;
         grid-gap:0.1em;
+        min-height: 230px;
+    }
+
+    #month-year h3 {
+        margin-top: 7%;
+        font-size: 15px;
     }
 
     #price-wrapper-container {
