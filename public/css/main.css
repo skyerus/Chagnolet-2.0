@@ -170,10 +170,12 @@ h2 {
   border: rgb(245, 235, 235) 3px solid;
   background-color: rgb(245, 235, 235);
   margin-top: 3%;
+  border-radius: 3px;
 }
 
 .main-img img, .imgs img {
   width: 100%;
+  border-radius:3px;
 }
 
 .main-img {
