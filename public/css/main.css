@@ -152,7 +152,10 @@ h2 {
   .row-nav-item {
     display:none;
   }
-
+  
+  h2 {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 1000px){
