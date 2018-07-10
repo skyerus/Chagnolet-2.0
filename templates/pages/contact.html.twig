@@ -11,16 +11,14 @@
             <p>If you would like us to send you an order form or if you have any questions then please contact us by filling in the form or calling the number provided below.</p>
             <p>Andrew and Wendy Gill: </p>
             <p>Tel: +33-5-46-59-28-10 (if you hear a French lady speak, just wait for the beep and leave a message)</p>
+            <div class="form-container">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="form-container">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
-    </div>
-</div>
 
 {% endblock %}

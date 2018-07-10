@@ -11,16 +11,14 @@
             <p>Pour toute réservation ou informations supplémentaires voici nos coordonnées.</p>
             <p>Andrew et Wendy Gill: </p>
             <p>Tel: +33-5-46-59-28-10</p>
+            <div class="form-container">
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="form-container">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
-    </div>
-</div>
 
 {% endblock %}
