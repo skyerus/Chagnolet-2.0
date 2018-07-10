@@ -80,9 +80,9 @@
                 // $entityManager->persist($email);
                 // $entityManager->flush();
 
-                $transport = (new \Swift_SmtpTransport($_ENV["MAILER_HOST"], $_ENV["MAILER_PORT"],'tls'))
-                ->setUsername($_ENV["MAILER_USERNAME"])
-                ->setPassword($_ENV["MAILER_PASSWORD"])
+                $transport = (new \Swift_SmtpTransport($_SERVER["MAILER_HOST"], $_SERVER["MAILER_PORT"],'tls'))
+                ->setUsername($_SERVER["MAILER_USERNAME"])
+                ->setPassword($_SERVER["MAILER_PASSWORD"])
                 ;
                 $mailer = new \Swift_Mailer($transport);
                 $sendEmail = $this->sendEmail($email->getName(),$email->getEmail(),$email->getMessage(), $mailer);
@@ -98,7 +98,7 @@
         public function sendEmail($name, $email, $message, \Swift_Mailer $mailer) {
             $message = (new \Swift_Message('Hello Skye'))
                 ->setFrom('admin@chagnolet.com')
-                ->setTo($_ENV["MAILER_RECIPIENT"])
+                ->setTo($_SERVER["MAILER_RECIPIENT"])
                 ->setBody(
                     $this->renderView(
                         // templates/emails/message.html.twig
@@ -200,9 +200,9 @@
                 // $entityManager->persist($email);
                 // $entityManager->flush();
 
-                $transport = (new \Swift_SmtpTransport($_ENV["MAILER_HOST"], $_ENV["MAILER_PORT"],'tls'))
-                ->setUsername($_ENV["MAILER_USERNAME"])
-                ->setPassword($_ENV["MAILER_PASSWORD"])
+                $transport = (new \Swift_SmtpTransport($_SERVER["MAILER_HOST"], $_SERVER["MAILER_PORT"],'tls'))
+                ->setUsername($_SERVER["MAILER_USERNAME"])
+                ->setPassword($_SERVER["MAILER_PASSWORD"])
                 ;
                 $mailer = new \Swift_Mailer($transport);
                 $sendEmail = $this->sendEmail($email->getName(),$email->getEmail(),$email->getMessage(), $mailer);
