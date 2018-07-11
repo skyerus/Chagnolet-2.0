@@ -64,7 +64,7 @@ h2 {
 }
 
 .form-container {
-  width: 70%;
+  width: 80%;
   margin:auto;
   margin-top:3%;
 }
@@ -155,6 +155,10 @@ h2 {
   
   h2 {
     font-size: 22px;
+  }
+
+  .form-container {
+    width: 100%;
   }
 }
 
