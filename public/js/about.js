@@ -18,4 +18,7 @@ function imgClick(e) {
     // Remove fade-in after 0.5 seconds
     setTimeout(() => current.classList.remove('fade-in'),500);
     e.target.style.opacity = opacity;
+    if (screen.width >=801 ){
+        window.scrollTo(0,window.innerHeight/1.1);
+    } 
 }
