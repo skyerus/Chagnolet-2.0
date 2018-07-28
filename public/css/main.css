@@ -58,7 +58,7 @@ h2 {
 
 .wrapper-twoimg {
   display:grid;
-  grid-template-columns: 43.8% 56.2%;
+  grid-template-columns: 53.8% 46.2%;
   margin-top: 2%;
   grid-gap:0.2%;
 }

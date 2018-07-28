@@ -44,19 +44,19 @@
         {
             "month":"july",
             "1": {
-                "colour":"orange"
-            },
-            "9": {
-                "colour":"orange",
-                "colourTwo":"purple"
-            },
-            "10": {
-                "colour":"purple"
+                "colour":"red"
             }
         },
         {
             "month":"august",
             "1" : {
+                "colour":"red"
+            },
+            "24": {
+                "colour":"red",
+                "colourTwo":"purple"
+            },
+            "25": {
                 "colour":"purple"
             },
             "27": {
